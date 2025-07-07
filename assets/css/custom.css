@@ -5,6 +5,23 @@
 .header-main{
     color: #1F66B1;
 }
+/* about us  */
+.facility-style1 .facility-text {
+    font-weight: 500;
+    color: var(--title-color);
+    margin: 0;
+}
+.container-style8 {
+    max-width: 1144px;
+}
+
+.breadcumb-wrapper {
+    padding-top: 20px;
+    margin-bottom: -4px;
+}
+.breadcumb-title {
+    margin-top: 1.5em;
+}
 /* Footer  */
 .footer-logo{
     display: flex;
@@ -27,6 +44,14 @@
     width: 90px;
     padding: 3px;
   }
+  .footer-logo{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 3.5% 5%;
+    border-radius: 12px;
+    width: 200px;
+}
 }
 @media (max-width: 416px) {
   .header1-logo{

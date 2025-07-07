@@ -78,8 +78,8 @@ Version: 1.0.0
   --theme-color5: #27467C;
   --title-color: #1f66b1;
   --title-color2: #000000;
-  --body-color: #888c92;
-  --body-color2: #555555;
+  --body-color: #000000;
+  --body-color2: #000000;
   --secondary-color: #cdf8ff;
   --smoke-color: #f3f6f7;
   --light-color: #afafaf;
@@ -6298,7 +6298,7 @@ textarea.form-control.is-invalid {
 }
 
 .widget-area.v7 {
-  padding: 100px 0 12px;
+  padding: 50px 0 12px;
   /* Medium devices */
 }
 @media (max-width: 992px) {
@@ -6974,7 +6974,7 @@ textarea.form-control.is-invalid {
   background-color: var(--white-color);
   -webkit-box-shadow: 0px 15px 42.75px 2.25px rgba(39, 71, 125, 0.07);
           box-shadow: 0px 15px 42.75px 2.25px rgba(39, 71, 125, 0.07);
-  padding: 48px 100px;
+  padding: 28px 70px;
   border-radius: 9999px;
 }
 .breadcumb-menu li {
