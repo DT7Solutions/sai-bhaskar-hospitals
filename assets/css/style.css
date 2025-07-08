@@ -646,7 +646,7 @@ h6 {
 
 textarea.form-control.style3,
 textarea.form-control.style2 {
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .form-select {
@@ -4538,7 +4538,7 @@ textarea.form-control.is-invalid {
   position: relative;
   padding-right: 31px;
 }
-.head-top-links > li:before {
+/* .head-top-links > li:before {
   content: "";
   position: absolute;
   right: 0;
@@ -4547,7 +4547,7 @@ textarea.form-control.is-invalid {
   height: 16px;
   margin-top: -8px;
   background-color: #6f87af;
-}
+} */
 .head-top-links > li:last-child {
   padding-right: 0;
   margin-right: 0;
