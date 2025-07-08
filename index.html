@@ -250,14 +250,14 @@
                                             <a href="./about-us">About us</a>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="service.html">Services</a>
+                                            <a href="services.html">Services</a>
                                             <ul class="sub-menu">
-                                                <li><a href="service.html">Services</a></li>
+                                                <li><a href="services.html">Services</a></li>
                                                 <li><a href="service-details.html">Services Details</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="blog.html">Blogs</a>
+                                            <a href="blogs.html">Blogs</a>
                                         </li>
                                         <li>
                                             <a href="#"><span class="has-new-label">Awards</span></a>
@@ -270,7 +270,7 @@
                                 <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="fas fa-bars"></i></button>
                             </div>
                                 <div class="col-auto d-none d-lg-block">
-                                    <a href="appointment.html" class="vs-btn style2">Book Appointment<i class="far fa-calendar-alt"></i></a>
+                                    <a href="#appointment" class="vs-btn style2">Book Appointment<i class="far fa-calendar-alt"></i></a>
                                 </div>
                             <div class="col-auto gap-3 d-none d-lg-flex">
                                 <a href="#" class="icon-btn style3 sideMenuToggler"><i class="far fa-bars"></i></a>
@@ -410,8 +410,10 @@
     </section>
 
     <!--Service Area -->
-    <section class="vs-service-wrapper space-top space-md-bottom">
-        <div class="container">
+    <section class="vs-service-wrapper space-top space-md-bottom" data-bg-src="assets/img/bg/ser-bg9-1.jpg">
+        <!-- service-section-nine -->
+        <div class="service-section-nine">
+            <div class="container-style8">
             <div class="row text-center justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="section-title">
@@ -429,126 +431,165 @@
                     </div>
                 </div>
             </div>
-    
-    
-            <!-- Service Cards Row Start -->
-            <div class="row">
-                <!-- Service Item 1 -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="service-thumb">
-                        <div class="sr-img">
-                            <img class="w-100" src="assets/img/service/sr-3-1.jpg" alt="Service Image">
-                        </div>
-                        <div class="sr-body">
-                            <span class="sr-icon"><i class="flaticon-discuss fa-3x"></i></span>
-                            <h3 class="h4 sr-title"><a class="text-reset" href="service-details.html">Haematology</a></h3>
-                            <div class="sr-content">
-                                <p class="sr-text">Appropriately customize excellent imperatives for products.</p>
-                                <a href="service-details.html" class="link-btn">Read More<i
-                                        class="fal fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Service Item 2 -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="service-thumb">
-                        <div class="sr-img">
-                            <img class="w-100" src="assets/img/service/sr-3-2.jpg" alt="Service Image">
-                        </div>
-                        <div class="sr-body">
-                            <span class="sr-icon"><i class="flaticon-group fa-3x"></i></span>
-                            <h3 class="h4 sr-title"><a class="text-reset" href="service-details.html">Family Physician</a>
-                            </h3>
-                            <div class="sr-content">
-                                <p class="sr-text">Appropriately customize excellent imperatives for products.</p>
-                                <a href="service-details.html" class="link-btn">Read More<i
-                                        class="fal fa-long-arrow-right"></i></a>
-                            </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <div class="service-tabs">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="gastroenterology-tab" data-bs-toggle="tab" data-bs-target="#gastroenterology" type="button" role="tab" aria-controls="gastroenterology" aria-selected="true"><i class="fa fa-plus"></i>Gastroenterology</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="cardiac-tab" data-bs-toggle="tab" data-bs-target="#cardiac" type="button" role="tab" aria-controls="cardiac" aria-selected="false"><i class="fa fa-plus"></i>Cardiac Care</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="paediatrics-tab" data-bs-toggle="tab" data-bs-target="#paediatrics" type="button" role="tab" aria-controls="paediatrics" aria-selected="false"><i class="fa fa-plus"></i>Paediatrics</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="breast-tab" data-bs-toggle="tab" data-bs-target="#breast" type="button" role="tab" aria-controls="breast" aria-selected="false"><i class="fa fa-plus"></i>Breast Cancer</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="dermatology-tab" data-bs-toggle="tab" data-bs-target="#dermatology" type="button" role="tab" aria-controls="dermatology" aria-selected="false"><i class="fa fa-plus"></i>Dermatology</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="neurology-tab" data-bs-toggle="tab" data-bs-target="#neurology" type="button" role="tab" aria-controls="neurology" aria-selected="false"><i class="fa fa-plus"></i>Neurology</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="eye-tab" data-bs-toggle="tab" data-bs-target="#eye" type="button" role="tab" aria-controls="eye" aria-selected="false"><i class="fa fa-plus"></i>Eye Care</button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-    
-                <!-- Service Item 3 -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="service-thumb">
-                        <div class="sr-img">
-                            <img class="w-100" src="assets/img/service/sr-3-3.jpg" alt="Service Image">
-                        </div>
-                        <div class="sr-body">
-                            <span class="sr-icon"><i class="flaticon-quality-of-life fa-3x"></i></span>
-                            <h3 class="h4 sr-title"><a class="text-reset" href="service-details.html">Pediatrician</a></h3>
-                            <div class="sr-content">
-                                <p class="sr-text">Appropriately customize excellent imperatives for products.</p>
-                                <a href="service-details.html" class="link-btn">Read More<i
-                                        class="fal fa-long-arrow-right"></i></a>
+                    <div class="col-lg-7 col-md-12 col-sm-12">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="gastroenterology" role="tabpanel" aria-labelledby="gastroenterology-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Gastroenterology</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-1.png" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Service Item 4 -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="service-thumb">
-                        <div class="sr-img">
-                            <img class="w-100" src="assets/img/service/sr-3-4.jpg" alt="Service Image">
-                        </div>
-                        <div class="sr-body">
-                            <span class="sr-icon"><i class="flaticon-healthcare fa-3x"></i></span>
-                            <h3 class="h4 sr-title"><a class="text-reset" href="service-details.html">Gynecologist</a></h3>
-                            <div class="sr-content">
-                                <p class="sr-text">Appropriately customize excellent imperatives for products.</p>
-                                <a href="service-details.html" class="link-btn">Read More<i
-                                        class="fal fa-long-arrow-right"></i></a>
+                            <div class="tab-pane fade" id="cardiac" role="tabpanel" aria-labelledby="cardiac-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Cardiac Care</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-2.jpg" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Service Item 5 -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="service-thumb">
-                        <div class="sr-img">
-                            <img class="w-100" src="assets/img/service/sr-3-5.jpg" alt="Service Image">
-                        </div>
-                        <div class="sr-body">
-                            <span class="sr-icon"><i class="flaticon-medical-symbol fa-3x"></i></span>
-                            <h3 class="h4 sr-title"><a class="text-reset" href="service-details.html">Expert Surgeon</a>
-                            </h3>
-                            <div class="sr-content">
-                                <p class="sr-text">Appropriately customize excellent imperatives for products.</p>
-                                <a href="service-details.html" class="link-btn">Read More<i
-                                        class="fal fa-long-arrow-right"></i></a>
+                            <div class="tab-pane fade" id="paediatrics" role="tabpanel" aria-labelledby="paediatrics-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Paediatrics</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-3.jpg" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Service Item 6 -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="service-thumb">
-                        <div class="sr-img">
-                            <img class="w-100" src="assets/img/service/sr-3-6.jpg" alt="Service Image">
-                        </div>
-                        <div class="sr-body">
-                            <span class="sr-icon"><i class="flaticon-stethoscope fa-3x"></i></span>
-                            <h3 class="h4 sr-title"><a class="text-reset" href="service-details.html">Nephrologist</a></h3>
-                            <div class="sr-content">
-                                <p class="sr-text">Appropriately customize excellent imperatives for products.</p>
-                                <a href="service-details.html" class="link-btn">Read More<i
-                                        class="fal fa-long-arrow-right"></i></a>
+                            <div class="tab-pane fade" id="breast" role="tabpanel" aria-labelledby="breast-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Breast Cancer</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-4.jpg" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="dermatology" role="tabpanel" aria-labelledby="dermatology-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Dermatology</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-5.jpg" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="neurology" role="tabpanel" aria-labelledby="neurology-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Neurology</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-6.jpg" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="eye" role="tabpanel" aria-labelledby="eye-tab">
+                                <div class="service-tab-content">
+                                    <h4 class="title">Eye Care</h4>
+                                    <p>There are many variations Lorem Ipsum availab.There are many of pas ofb.There are many variations.</p>
+                                    <ul class="ser-list-nine">
+                                        <li>Invasive (infiltrating) ductal carcinoma</li>
+                                        <li>Lobular breast cancer</li>
+                                        <li>Ductal carcinoma in situ (DCIS)</li>
+                                        <li>Triple-negative breast cancer (TNBC)</li>
+                                    </ul>
+                                    <a href="#" class="ser-btn-nine">Learn More</a>
+                                    <div class="ser-img-nine">
+                                        <img src="assets/img/service/ser9-3.jpg" alt="">
+                                        <div class="icon-box"><img src="assets/img/service/ser9-2.svg" class="image" alt=""></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Service Cards Row End -->
         </div>
+        <!-- End service-section-nine -->
     </section>
     
     <!--About Area-->
-    <section class="vs-about-wrapper space-md-bottom">
+    <section class="vs-about-wrapper space-top space-md-bottom">
             <div class="container">
                 <div class="row flex-row-reverse">
                     <div class="col-xl-5 col-xxl-6 mb-30">
@@ -717,7 +758,7 @@
     </section>
 
     <!--Appointment Form Area -->
-    <section class="appointment-wrapper space-top space-md-bottom">
+    <section class="appointment-wrapper space-md-bottom" id="appointment">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 mb-30">
@@ -1049,8 +1090,7 @@
             </div>
         </div>
     </section>
-
-
+    
     <!--Brand Area-->
     <section class="vs-brand-wrapper position-relative  ">
         <div class="icon-shape1 d-none d-xxl-block"><img src="assets/img/icon/icon-1.jpg" alt="Icon"></div>
@@ -1063,6 +1103,38 @@
                             <span class="h3 text-theme sec-subtitle">Customer Satisfaction</span>
                             <h2 class="h1">We love our Brands</h2>
                             <p>Proactively revolutionize granular customer service after pandemic internal or "organic" sources. Distinctively impact proactive human capital rather than client-centered benefits. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row vs-carousel" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
+                    <div class="col-auto">
+                        <div class="brand">
+                            <img src="assets/img/brand/brand-1-1.svg" alt="Brand Image">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="brand">
+                            <img src="assets/img/brand/brand-1-2.svg" alt="Brand Image">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="brand">
+                            <img src="assets/img/brand/brand-1-3.svg" alt="Brand Image">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="brand">
+                            <img src="assets/img/brand/brand-1-4.svg" alt="Brand Image">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="brand">
+                            <img src="assets/img/brand/brand-1-5.svg" alt="Brand Image">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="brand">
+                            <img src="assets/img/brand/brand-1-6.svg" alt="Brand Image">
                         </div>
                     </div>
                 </div>
@@ -1111,7 +1183,7 @@
                                 <div class="media-style7 v1">
                                     <div class="media-icon-seven"><i class="fal fa-phone-alt"></i></div>
                                     <div class="media-body-seven">
-                                        <p class="media-text">6/2 ARUNDELPET,<br>GUNTUR-522002, A.P</p>
+                                        <p class="media-text">0863-2241370<br>0863-2354189</p>
                                     </div>
                                 </div>
                                 <div class="media-style7">

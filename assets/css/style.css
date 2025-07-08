@@ -120,6 +120,7 @@ body {
   line-height: 26px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 iframe {
@@ -3206,7 +3207,7 @@ textarea.form-control.is-invalid {
 .widget_categories a {
   display: block;
   background-color: var(--white-color);
-  color: var(--white-color);
+  color: #000000;
   padding: 17px 25px 17px 20px;
   margin-bottom: 10px;
   padding-right: 50px;
@@ -11481,7 +11482,7 @@ blockquote cite:before {
 
 .service-tabs {
   border-radius: 10px 10px 300px 10px;
-  background: #27477d;
+  background: #1f66b1;
   padding: 25px 25px 23px 22px;
   overflow: hidden;
   /* Large devices */
@@ -11518,7 +11519,7 @@ blockquote cite:before {
   line-height: normal;
 }
 .service-tabs .nav-tabs .nav-link:hover {
-  background-color: #07ccec;
+  background-color: #f58321;
 }
 .service-tabs .nav-tabs .nav-link:hover i {
   color: var(--white-color);
@@ -11531,7 +11532,7 @@ blockquote cite:before {
   color: rgba(255, 255, 255, 0.5);
 }
 .service-tabs .nav-link.active {
-  background-color: #07ccec;
+  background-color: #f58321;
 }
 .service-tabs .nav-link.active i {
   color: var(--white-color);
@@ -11581,9 +11582,9 @@ blockquote cite:before {
   }
 }
 .service-tab-content p {
-  color: #444;
-  font-family: var(--title-font);
-  font-size: 18px;
+  color: #000000;
+  font-family:  var(--body-font);
+  font-size: 17px;
   font-weight: 400;
   line-height: 32px;
   margin-bottom: 23px;
@@ -11628,7 +11629,7 @@ blockquote cite:before {
   line-height: 124.044px;
   text-align: center;
   border-radius: 50%;
-  background-color: #07ccec;
+  background-color: #1f66b1;
   border-radius: 50%;
 }
 .service-tab-content .ser-img-nine .icon-box::before {
@@ -11651,8 +11652,8 @@ blockquote cite:before {
 .ser-list-nine li {
   position: relative;
   color: #000;
-  font-family: var(--title-font);
-  font-size: 18px;
+  font-family:  var(--body-font);
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
@@ -14622,7 +14623,7 @@ body {
 
 .why-choose-section7 {
   position: relative;
-  padding-bottom: 245px;
+  padding-bottom: 100px;
   /* Large devices */
 }
 @media (max-width: 1199px) {
@@ -16005,7 +16006,7 @@ body {
 
 .contact-info-section-two {
   position: relative;
-  margin-bottom: -104px;
+  margin-bottom: 90px;
   z-index: 9999;
 }
 .contact-info-section-two .outer-box {
@@ -16062,7 +16063,7 @@ body {
           transform: translateX(-50%);
   width: 119px;
   height: 119px;
-  background-color: #07ccec;
+  background-color: #f58321;
   line-height: 119px;
   text-align: center;
   border-radius: 50%;
