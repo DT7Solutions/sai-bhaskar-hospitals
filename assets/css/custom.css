@@ -22,6 +22,15 @@
 .breadcumb-title {
     margin-top: 1.5em;
 }
+section.vs-health-schemes.space-bottom {
+    margin-top: 20px;
+}
+.text-health{
+    color: #f58321;
+}
+.text-state{
+    color: #1F66B1;
+}
 /* awards  */
 .project-img {
     position: relative;
@@ -104,6 +113,12 @@
 .close-btn:hover {
     background: #fff;
     transform: scale(1.1);
+}
+.contact-box-two p {
+    color: #fff;
+    font-size: 16px;
+    text-align: justify;
+    margin: 16px 18px;
 }
 /* Footer  */
 .footer-logo{
