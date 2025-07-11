@@ -47,6 +47,7 @@
     <!-- Custom CSS  -->
      <link rel="stylesheet" href="assets/css/custom.css">
 
+
 </head>
 
 <body class="">
@@ -293,7 +294,7 @@
         <div class="container">
             <div class="row gx-60 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <form action="mail.php" method="POST" class="ajax-contact form-wrap3 mb-30" data-bg-color="#f3f6f7">
+                    <form  class="ajax-contact form-wrap3 mb-30" data-bg-color="#f3f6f7" id="contact-form" action="#" method="post">
                         <div class="form-title">
                             <h3 class="mt-n2 fls-n2 mb-0">Send Us a Message</h3>
                             <p class="text-theme mb-4">Your email address will not be published*</p>
@@ -440,6 +441,78 @@
         </div>
     </footer>
 
+    <!-- Email Js  -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- EmailJs  -->
+    <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("-dH2HZ2kSwRVINVSK"); // Replace with your actual public key
+        })();
+
+        // Handle form submission
+        document.querySelector('.ajax-contact').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const submitBtn = this.querySelector('.vs-btn');
+            const formMessages = this.querySelector('.form-messages');
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+
+            // Hide previous messages
+            formMessages.style.display = 'none';
+            formMessages.className = 'form-messages mb-0 mt-3';
+
+            // Get form data
+            const templateParams = {
+                from_name: this.querySelector('#name').value,
+                from_email: this.querySelector('#email').value,
+                message: this.querySelector('#message').value,
+                submission_date: new Date().toLocaleString(),
+            };
+
+            // Send email
+            emailjs.send('service_niw092h', 'template_rz3p8cj', templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+
+                    // Show success message
+                    formMessages.innerHTML = 'Thank you! Your message has been sent successfully.';
+                    formMessages.className = 'form-messages mb-0 mt-3';
+                    formMessages.style.display = 'block';
+                    formMessages.style.color = '#28a745';
+                    formMessages.style.backgroundColor = '#d4edda';
+                    formMessages.style.border = '1px solid #c3e6cb';
+                    formMessages.style.padding = '10px';
+                    formMessages.style.borderRadius = '4px';
+
+                    // Reset form
+                    document.querySelector('.ajax-contact').reset();
+
+                }, function (error) {
+                    console.log('FAILED...', error);
+
+                    // Show error message
+                    formMessages.innerHTML = 'Sorry, there was an error sending your message. Please try again.';
+                    formMessages.className = 'form-messages mb-0 mt-3';
+                    formMessages.style.display = 'block';
+                    formMessages.style.color = '#721c24';
+                    formMessages.style.backgroundColor = '#f8d7da';
+                    formMessages.style.border = '1px solid #f5c6cb';
+                    formMessages.style.padding = '10px';
+                    formMessages.style.borderRadius = '4px';
+                })
+                .finally(function () {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                });
+        });
+    </script>
+
 
 
     <!--********************************
@@ -483,6 +556,7 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+
 
 </body>
 

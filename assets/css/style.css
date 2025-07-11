@@ -576,7 +576,7 @@ h6 {
 .form-select.style3, .form-select.style2,
 .form-control.style3,
 .form-control.style2 {
-  height: 60px;
+  height: 45px;
   color: var(--title-color);
   font-size: 14px;
   border-radius: 9999px;
@@ -589,7 +589,7 @@ h6 {
 .form-control.style3 ~ i,
 .form-control.style2 ~ i {
   font-size: 16px;
-  top: 22px;
+  top: 16px;
   color: var(--title-color);
   right: calc(var(--bs-gutter-x) + 15px);
 }
