@@ -5,6 +5,9 @@
 .header-main{
     color: #1F66B1;
 }
+.header-top i {
+    color: #f58321;
+}
 /* about us  */
 .facility-style1 .facility-text {
     font-weight: 500;
