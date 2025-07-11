@@ -8,6 +8,17 @@
 .header-top i {
     color: #f58321;
 }
+.facility-style1 .facility-title{
+    font-size: 14px;
+}
+
+.facility-style1 .facility-icon {
+    outline: none !important;
+}
+/* .facility-style1 .facility-icon:hover {
+    transform: scale(1.4);
+    transition: transform 0.3s ease;
+} */
 /* about us  */
 .facility-style1 .facility-text {
     font-weight: 500;
@@ -34,38 +45,11 @@ section.vs-health-schemes.space-bottom {
 .text-state{
     color: #1F66B1;
 }
-/* Remove circle and hover effects from facility icons */
-.facility-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    height: 70px;
-    background: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+.facility-title-about{
+    font-size: 24px;
 }
-
-.facility-icon img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Remove all hover effects */
-.facility-icon:hover {
-    background: none !important;
-    border: none !important;
-    transform: none !important;
-    box-shadow: none !important;
-}
-
-.facility-icon:hover img {
-    transform: none !important;
-    filter: none !important;
+.facility-style1 .facility-text {
+    margin: -11px;
 }
 /* awards  */
 .project-img {
@@ -204,14 +188,3 @@ section.vs-health-schemes.space-bottom {
 }
 
 
-.facility-style1 .facility-title{
-    font-size: 14px;
-}
-
-.facility-style1 .facility-icon {
-    outline: none !important;
-}
-/* .facility-style1 .facility-icon:hover {
-    transform: scale(1.4);
-    transition: transform 0.3s ease;
-} */
