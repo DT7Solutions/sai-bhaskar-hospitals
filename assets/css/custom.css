@@ -188,4 +188,15 @@ section.vs-health-schemes.space-bottom {
   }
 }
 
+.col-auto .brand{
+    border: 1px solid rgb(238, 238, 238);
+    margin-top: 20px;
+}
+.col-auto .brand:hover{
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
 
+
+.sc-item:hover{
+    background-color: #f58321 !important;
+}
