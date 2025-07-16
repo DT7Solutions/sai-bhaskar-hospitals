@@ -174,7 +174,7 @@ section.vs-health-schemes.space-bottom {
     display: flex;
     justify-content: center;
     background-color: #fff;
-    padding: 3.5% 5%;
+    padding: 5% 5%;
     border-radius: 12px;
 }
 .sidemenu-wrapper{
@@ -186,6 +186,30 @@ section.vs-health-schemes.space-bottom {
 .media-body-seven {
     margin-left: -11px;
 }
+.footer-location-links {
+    position: absolute;
+    top: 85px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    white-space: nowrap;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+.footer-location-links a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 25px;
+    margin-left: -19px;
+}
+
+.footer-location-links a:hover {
+    color: #1F66B1;
+    text-decoration: underline;
+}
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
