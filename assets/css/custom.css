@@ -1,6 +1,6 @@
 /* Header  */
 .header1-logo{
-    width: 138px;
+    width: 122px;
 }
 .header-main{
     color: #1F66B1;
@@ -8,6 +8,34 @@
 .header-top i {
     color: #f58321;
 }
+.header1-logo {
+    position: relative;
+}
+
+.location-links {
+    position: absolute;
+    bottom: -20px;
+    left: 65%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    white-space: nowrap;
+    font-weight: 600;
+    font-family: 'Roboto';
+}
+
+.location-links a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 14px;
+    margin-left: -8px;
+}
+
+.location-links a:hover {
+    color: #1F66B1;
+    text-decoration: underline;
+}
+
 .facility-style1 .facility-title{
     font-size: 14px;
 }
