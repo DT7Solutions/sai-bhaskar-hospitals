@@ -234,10 +234,32 @@ section.vs-health-schemes.space-bottom {
 }
 }
 @media (max-width: 416px) {
-  .header1-logo{
-    width: 85px;
-    padding: 3px;
-  }
+    .header1-logo {
+        width: 85px;
+        padding: 9px;
+    }
+
+    .location-links {
+        position: absolute;
+        bottom: -9px;
+        left: 70%;
+        transform: translateX(-50%);
+        font-size: 5px;
+        white-space: nowrap;
+        font-weight: 600;
+        font-family: 'Roboto';
+    }
+
+    .footer-location-links {
+        position: absolute;
+        top: 78px;
+        left: 38%;
+        transform: translateX(-50%);
+        font-size: 7px;
+        white-space: nowrap;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+    }
 }
 
 .col-auto .brand{
