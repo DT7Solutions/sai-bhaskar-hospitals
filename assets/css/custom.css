@@ -269,9 +269,48 @@ section.vs-health-schemes.space-bottom {
 .col-auto .brand:hover{
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
 }
+.sc-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
 
+.sc-item:hover {
+    text-decoration: none;
+    color: inherit;
+}
 
-.sc-item:hover{
+.sc-item .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.sc-item .scheme-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+    color: #333;
+}
+.row.justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.row.justify-content-center > .col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+
+/* .sc-item:hover{
     background-color: #f58321 !important;
     color: white;
-}
+} */
