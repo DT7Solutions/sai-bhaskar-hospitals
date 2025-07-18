@@ -1,47 +1,74 @@
 /* Header  */
-.header1-logo{
+.header1-logo {
     width: 123px;
 }
-.header-main{
+
+.header-main {
     color: #1F66B1;
 }
+
 .header-top i {
     color: #f58321;
 }
+
 .header1-logo {
     position: relative;
 }
 
 .location-links {
     position: absolute;
-    bottom: -20px;
-    left: 65%;
+    bottom: -16px;
+    left: 58%;
     transform: translateX(-50%);
     font-size: 8px;
     white-space: nowrap;
     font-weight: 600;
     font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    /* spacing between Guntur and Vijayawada */
+}
+
+.location-item {
+    display: flex;
+    align-items: center;
+}
+
+.mouse-icon:hover {
+    opacity: 1;
 }
 
 .location-links a {
-    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
-    margin-right: 14px;
-    margin-left: -8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    vertical-align: middle;
+    line-height: 16px;
+
 }
 
 .location-links a:hover {
-    color: #1F66B1;
+    color: #1F66B1 !important;
 }
 
-.facility-style1 .facility-title{
+.mouse-icon {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    margin: 3px 2px !important;
+}
+
+.facility-style1 .facility-title {
     font-size: 14px;
 }
 
 .facility-style1 .facility-icon {
     outline: none !important;
 }
+
 /* .facility-style1 .facility-icon:hover {
     transform: scale(1.4);
     transition: transform 0.3s ease;
@@ -52,6 +79,7 @@
     color: var(--title-color);
     margin: 0;
 }
+
 .container-style8 {
     max-width: 1150px;
 }
@@ -61,24 +89,31 @@
     margin-bottom: -4px;
 
 }
+
 .breadcumb-title {
     margin-top: 1.5em;
 }
+
 section.vs-health-schemes.space-bottom {
     margin-top: 20px;
 }
-.text-health{
+
+.text-health {
     color: #f58321;
 }
-.text-state{
+
+.text-state {
     color: #1F66B1;
 }
-.facility-title-about{
+
+.facility-title-about {
     font-size: 24px;
 }
+
 .facility-style1 .facility-text {
     margin: -11px;
 }
+
 /* awards  */
 .project-img {
     position: relative;
@@ -162,58 +197,84 @@ section.vs-health-schemes.space-bottom {
     background: #fff;
     transform: scale(1.1);
 }
+
 .contact-box-two p {
     color: #fff;
     font-size: 16px;
     text-align: justify;
     margin: 16px 18px;
 }
+
 /* Footer  */
-.footer-logo{
+.footer-logo {
     display: flex;
     justify-content: center;
     background-color: #fff;
     padding: 5% 5%;
     border-radius: 12px;
 }
-.sidemenu-wrapper{
+
+.sidemenu-wrapper {
     color: black;
 }
-.sidemenu-wrapper p{
+
+.sidemenu-wrapper p {
     color: black;
 }
+
 .media-body-seven {
     margin-left: -11px;
 }
+
 .footer-location-links {
     position: absolute;
-    top: 21%; 
-    left: 50%;
+    top: 21%;
+    left: 46%;
     transform: translateX(-50%);
     font-size: 9px;
     white-space: nowrap;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
-}
-.footer-location-links a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    margin-right: 25px;
-    margin-left: -19px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
 
-.footer-location-links a:hover {
-    color: #1F66B1;
+.footer-location-links a {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
+
+.mouse-icon {
+    width: 12px;
+    height: 12px;
+    stroke: #000;
+}
+
+/* Responsive size */
+@media (max-width: 416px) {
+    .mouse-icon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 
 /* Responsive adjustments */
 @media (min-width: 1400px) {
- .footer-location-links {
-    position: absolute;
-    top: 24%;
+    .footer-location-links {
+        position: absolute;
+        top: 24%;
+    }
+       .mouse-icon {
+        width: 10px;
+        height: 10px;
+    }
 }
-}
+
 @media (max-width: 768px) {
     .logo-container {
         width: 100px;
@@ -221,20 +282,23 @@ section.vs-health-schemes.space-bottom {
         padding: 8px;
     }
 }
+
 @media (max-width: 576px) {
-  .header1-logo{
-    width: 90px;
-    padding: 3px;
-  }
-  .footer-logo{
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    padding: 3.5% 5%;
-    border-radius: 12px;
-    width: 200px;
+    .header1-logo {
+        width: 90px;
+        padding: 3px;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        padding: 3.5% 5%;
+        border-radius: 12px;
+        width: 200px;
+    }
 }
-}
+
 @media (max-width: 416px) {
     .header1-logo {
         width: 85px;
@@ -243,19 +307,24 @@ section.vs-health-schemes.space-bottom {
 
     .location-links {
         position: absolute;
-        bottom: -9px;
-        left: 70%;
+        bottom: -4px;
+        left: 58%;
         transform: translateX(-50%);
         font-size: 5px;
         white-space: nowrap;
         font-weight: 600;
-        font-family: 'Roboto';
+        font-family: Roboto;
+    }
+
+    .mouse-icon {
+        width: 11px !important;
+        height: 11px !important;
     }
 
     .footer-location-links {
         position: absolute;
         top: 78px;
-        left: 38%;
+        left: 33%;
         transform: translateX(-50%);
         font-size: 7px;
         white-space: nowrap;
@@ -264,13 +333,15 @@ section.vs-health-schemes.space-bottom {
     }
 }
 
-.col-auto .brand{
+.col-auto .brand {
     border: 1px solid rgb(238, 238, 238);
     margin-top: 20px;
 }
-.col-auto .brand:hover{
+
+.col-auto .brand:hover {
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
 }
+
 .sc-item {
     display: flex;
     flex-direction: column;
@@ -302,15 +373,18 @@ section.vs-health-schemes.space-bottom {
     line-height: 1.2;
     color: #333;
 }
+
 .row.justify-content-center {
     display: flex;
     justify-content: center;
     align-items: stretch;
 }
-.row.justify-content-center > .col-md-4 {
+
+.row.justify-content-center>.col-md-4 {
     display: flex;
     justify-content: center;
 }
+
 .sc-item-central {
     display: flex;
     flex-direction: column;
@@ -343,7 +417,7 @@ section.vs-health-schemes.space-bottom {
     color: #333;
     margin-top: 5px;
 }
-        
+
 
 /* .sc-item:hover{
     background-color: #f58321 !important;
