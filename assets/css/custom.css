@@ -1,6 +1,16 @@
+
+/* Custom Settings */
+.vs-btn {
+    padding: 18px 36px;
+}
+.section-title {
+    margin-bottom: 5%;
+}
+
 /* Header  */
 .header1-logo {
-    width: 123px;
+    margin-top: -10%;
+    width: 125px;
 }
 
 .header-main {
@@ -79,8 +89,23 @@
     margin: 0;
 }
 .facility-style1 .facility-icon {
+    width: 125px;
+    height: 125px;
+    line-height: 125px;
     outline: 1px solid #1F66B1;
 }
+.facility-style1 .facility-icon img {
+    width: 90px;
+    height: 90px;
+}
+.facility-title-about {
+    font-size: 16px;
+}
+.facility-style1 .facility-text {
+    display: none;
+    margin: 0;
+}
+
 .container-style8 {
     max-width: 1150px;
 }
@@ -109,14 +134,6 @@ section.vs-health-schemes.space-bottom {
 
 .text-state {
     color: #1F66B1;
-}
-
-.facility-title-about {
-    font-size: 20px;
-}
-
-.facility-style1 .facility-text {
-    margin: -11px;
 }
 
 /* awards  */
@@ -338,12 +355,17 @@ section.vs-health-schemes.space-bottom {
 }
 
 .col-auto .brand {
+    display: flex;
+    justify-content: center;
+    max-height: 150px;
     border: 1px solid rgb(238, 238, 238);
+    border-radius: 12px;
     margin-top: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .col-auto .brand:hover {
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1) !important;
 }
 
 .sc-item {
@@ -427,3 +449,8 @@ section.vs-health-schemes.space-bottom {
     background-color: #f58321 !important;
     color: white;
 } */
+
+/* Testimonials */
+.testimonial-box {
+    padding: 35px 30px 20px 30px;
+}
