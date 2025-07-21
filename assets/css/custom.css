@@ -64,11 +64,6 @@
 .facility-style1 .facility-title {
     font-size: 14px;
 }
-
-.facility-style1 .facility-icon {
-    outline: none !important;
-}
-
 /* .facility-style1 .facility-icon:hover {
     transform: scale(1.4);
     transition: transform 0.3s ease;
@@ -79,9 +74,15 @@
     color: var(--title-color);
     margin: 0;
 }
-
+.facility-style1 .facility-icon {
+    outline: 1px solid #1F66B1;
+}
 .container-style8 {
     max-width: 1150px;
+}
+
+.brand-wrap1{
+    padding: 81px 5px 100px 0px;
 }
 
 .breadcumb-wrapper {
@@ -253,7 +254,6 @@ section.vs-health-schemes.space-bottom {
     height: 12px;
     stroke: #000;
 }
-
 /* Responsive size */
 @media (max-width: 416px) {
     .mouse-icon {
