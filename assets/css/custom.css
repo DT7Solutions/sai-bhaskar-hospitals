@@ -64,6 +64,10 @@
 .facility-style1 .facility-title {
     font-size: 14px;
 }
+
+.facility-style1 .facility-text {
+    font-size: 22px;
+}
 /* .facility-style1 .facility-icon:hover {
     transform: scale(1.4);
     transition: transform 0.3s ease;
