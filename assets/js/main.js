@@ -141,34 +141,29 @@
   $('.vs-menu-wrapper').vsmobilemenu();
 
 
-
-
-
+  
   /*---------- 04. Sticky fix ----------*/
-  var lastScrollTop = '';
-  var scrollToTopBtn = '.scrollToTop'
-
-  function stickyMenu($targetMenu, $toggleClass, $parentClass) {
+  var lastScrollTop = 0;
+  var scrollToTopBtn = '.scrollToTop';
+  function stickyMenu($targetMenu, toggleClass, parentClass) {
     var st = $(window).scrollTop();
-    var height = $targetMenu.css('height');
+    var height = $targetMenu.outerHeight();
     $targetMenu.parent().css('min-height', height);
-    if ($(window).scrollTop() > 800) {
-      $targetMenu.parent().addClass($parentClass);
-
-      if (st > lastScrollTop) {
-        $targetMenu.removeClass($toggleClass);
-      } else {
-        $targetMenu.addClass($toggleClass);
-      };
+    if (st > 250) {
+      $targetMenu.parent().addClass(parentClass);
+      $targetMenu.addClass(toggleClass);
     } else {
-      $targetMenu.parent().css('min-height', '').removeClass($parentClass);
-      $targetMenu.removeClass($toggleClass);
-    };
+      $targetMenu.parent().removeClass(parentClass);
+      $targetMenu.removeClass(toggleClass);
+    }
+    if (st < lastScrollTop) {
+      $targetMenu.addClass(toggleClass);
+    }
     lastScrollTop = st;
-  };
+  }
   $(window).on("scroll", function () {
-    stickyMenu($('.sticky-active'), "active", "will-sticky");
-    if ($(this).scrollTop() > 500) {
+    stickyMenu($('.sticky-active'), 'active', 'will-sticky');
+    if ($(this).scrollTop() > 250) {
       $(scrollToTopBtn).addClass('show');
     } else {
       $(scrollToTopBtn).removeClass('show');
