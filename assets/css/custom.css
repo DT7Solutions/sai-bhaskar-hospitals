@@ -32,13 +32,13 @@ p {
     text-align: justify;
 }
 .scroll-bottom i {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     border-radius: 50%;
 }
 .scroll-bottom.show {
-    bottom: 5%;
+    bottom: 7.5%;
 }
 .vs-btn {
     padding: 14px 30px;
@@ -194,7 +194,6 @@ section.vs-health-schemes.space-bottom {
     position: relative;
     overflow: hidden;
 }
-
 .zoom-overlay {
     position: absolute;
     top: 0;
@@ -209,51 +208,45 @@ section.vs-health-schemes.space-bottom {
     transition: opacity 0.3s ease;
     cursor: pointer;
 }
-
 .project-img:hover .zoom-overlay {
     opacity: 1;
 }
-
 .zoom-icon {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 22px;
     color: #f58321;
     transition: all 0.3s ease;
 }
-
 .zoom-icon:hover {
     background: #fff;
     transform: scale(1.1);
 }
-
 .modal-content {
     background: transparent;
     border: none;
     box-shadow: none;
 }
-
 .modal-body {
     padding: 20px;
     text-align: center;
 }
-
 .modal-body img {
     max-width: 100%;
     max-height: 80vh;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
-
 .close-btn {
     position: absolute;
-    top: 1px;
-    right: 180px;
+    top: 0%;
+    right: 25%;
     background: rgba(255, 255, 255, 0.9);
     border: none;
     border-radius: 50%;
@@ -265,19 +258,36 @@ section.vs-health-schemes.space-bottom {
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 1051;
+    z-index: 99;
 }
-
 .close-btn:hover {
     background: #fff;
     transform: scale(1.1);
 }
-
 .contact-box-two p {
     color: #fff;
     font-size: 16px;
     text-align: justify;
     margin: 16px 18px;
+}
+
+/* Services Details */
+.service-bar {
+    padding: 5%;
+    margin-top: -7.5%;
+    margin-bottom: 2.5%;
+}
+
+/* Blog Details */
+.blog-details .blog-single .blog-content {
+    margin: 2.5% 0;
+}
+blockquote {
+    padding: 25px 30px;
+    margin: 15px 0;
+}
+blockquote:before {
+    font-size: 5rem;
 }
 
 /* Footer  */
@@ -374,6 +384,15 @@ section.vs-health-schemes.space-bottom {
     padding: 10px 0;
 }
 
+/* Doctor Detailed */
+.team-content .member-table {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.team-content .member-table th, 
+.team-content .member-table td {
+    padding: 10px 15px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
