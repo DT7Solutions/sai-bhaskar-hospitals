@@ -407,9 +407,10 @@ blockquote:before {
         width: 90px;
         padding: 3px;
     }
-    .text-title {
-        font-size: 25px;
-    }
+    .ls-slide p {
+    font-size: 25px !important;
+}
+
 }
 
 /* Responsive size */
