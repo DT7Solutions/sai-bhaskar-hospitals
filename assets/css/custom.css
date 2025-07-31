@@ -407,6 +407,9 @@ blockquote:before {
         width: 90px;
         padding: 3px;
     }
+    .text-title {
+        font-size: 25px;
+    }
 }
 
 /* Responsive size */
