@@ -407,9 +407,9 @@ blockquote:before {
         width: 90px;
         padding: 3px;
     }
-    /* .ls-slide h1 {
-    font-size: 42px !important;
-} */
+    .ls-slide h1 {
+    font-size: 50px !important;
+}
 
 }
 
