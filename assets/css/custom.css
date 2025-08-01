@@ -401,16 +401,27 @@ blockquote:before {
         height: 65px;
         padding: 8px;
     }
+    .ls-layer .vs-btn, .ls-btn .vs-btn {
+        padding: 7px 8px 7px 8px;
+        font-size: 5px;
+    }
 }
+
 @media (max-width: 576px) {
     .header1-logo {
         width: 90px;
         padding: 3px;
     }
     .ls-slide h1 {
-    font-size: 50px !important;
-    line-height: 32px;
-}
+            font-size: 50px !important;
+            line-height: 32px;
+    }
+    .parallax{
+    background-position: right center !important;
+    }
+    .breadcumb-title{
+        display: none;
+    }
 
 }
 
