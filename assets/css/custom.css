@@ -435,6 +435,25 @@ blockquote:before {
     .breadcumb-title{
         display: none;
     }
+        .space,
+        .space-top {
+            padding-top: 20%;
+        }
+    
+        .space-md,
+        .space-md-top {
+            padding-top: 20%;
+        }
+    
+        .space,
+        .space-bottom {
+            padding-bottom: 20%;
+        }
+    
+        .space-md,
+        .space-md-bottom {
+            padding-bottom: 20%;
+        }
 
 }
 
@@ -631,6 +650,26 @@ blockquote:before {
         font-family: Roboto, sans-serif;
         text-align: center;
     }
+        .space,
+        .space-top {
+            padding-top: 20%;
+        }
+    
+        .space-md,
+        .space-md-top {
+            padding-top: 20%;
+        }
+    
+        .space,
+        .space-bottom {
+            padding-bottom: 20%;
+        }
+    
+        .space-md,
+        .space-md-bottom {
+            padding-bottom: 20%;
+        }
+    
 }
 @media (max-width: 767px) {
     .h1,
@@ -670,4 +709,24 @@ blockquote:before {
         padding-bottom: 15px;
         padding-top: 30px;
     }
+        .space,
+        .space-top {
+            padding-top: 20%;
+        }
+    
+        .space-md,
+        .space-md-top {
+            padding-top: 20%;
+        }
+    
+        .space,
+        .space-bottom {
+            padding-bottom: 20%;
+        }
+    
+        .space-md,
+        .space-md-bottom {
+            padding-bottom: 20%;
+        }
+
 }
