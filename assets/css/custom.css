@@ -79,6 +79,13 @@ p {
 .header1-logo {
     position: relative;
 }
+.main-menu ul li.active > a {
+  color: #f58321;           
+}
+.vs-mobile-menu ul li.active > a {
+  color: #f58321;    
+}
+
 .location-links {
     position: absolute;
     bottom: -16px;
@@ -393,7 +400,13 @@ blockquote:before {
 .team-content .member-table td {
     padding: 10px 15px;
 }
-
+/* contact  */
+.contact-information h4 a {
+    font-size: 18px !important;
+}
+.contact-information p{
+    font-size: 18px !important;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-container {
