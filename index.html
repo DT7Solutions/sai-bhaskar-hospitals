@@ -868,43 +868,44 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-box">
+                        <div id="appointmentForm" class="form-box">
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" class="form-control style2" placeholder="Your Name">
+                                    <input type="text" class="form-control style2" placeholder="Your Name" name="user_name" required>
                                     <i class="fal small fa-user"></i>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control style2" placeholder="Email Address">
+                                    <input type="email" class="form-control style2" placeholder="Email Address" name="user_email" required>
                                     <i class="fal small fa-envelope"></i>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input type="number" class="form-control style2" placeholder="Your Phone">
+                                    <input type="number" class="form-control style2" placeholder="Your Phone" name="user_phone" required>
                                     <i class="fal small fa-phone"></i>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input type="text" class="dateTime-pick form-control style2" placeholder="Select Date & Time">
+                                    <input type="text" class="dateTime-pick form-control style2" placeholder="Select Date & Time"
+                                        name="appointment_time" required>
                                     <i class="fal small fa-calendar-alt"></i>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <select class="form-select style2">
-                                        <option hidden disabled selected>Select Services</option>
-                                        <option>Orthopedics</option>
-                                        <option>Obstetrics & Gynaecology</option>
-                                        <option>Pulmonology</option>
-                                        <option>Neuro Surgery</option>
-                                        <option>Plastic Surgery</option>
-                                        <option>Emergency & Casualty</option>
-                                        <option>General Surgery</option>
-                                        <option>General Medicine</option>
-                                        <option>Laboratory Medicine</option>
+                                    <select class="form-select style2" name="service" required>
+                                        <option value="" hidden disabled selected>Select Services</option>
+                                        <option value="Orthopedics">Orthopedics</option>
+                                        <option value="Obstetrics & Gynaecology">Obstetrics & Gynaecology</option>
+                                        <option value="Pulmonology">Pulmonology</option>
+                                        <option value="Neuro Surgery">Neuro Surgery</option>
+                                        <option value="Plastic Surgery">Plastic Surgery</option>
+                                        <option value="Emergency & Casualty">Emergency & Casualty</option>
+                                        <option value="General Surgery">General Surgery</option>
+                                        <option value="General Medicine">General Medicine</option>
+                                        <option value="Laboratory Medicine">Laboratory Medicine</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <select class="form-select style2">
-                                        <option hidden disabled selected>Choose Doctor</option>
-                                        <option>Dr. Narendra Reddy Busi Reddy</option>
-                                        <option>Orthopedic Surgeon</option>
+                                    <select class="form-select style2" name="doctor" required>
+                                        <option value="" hidden disabled selected>Choose Doctor</option>
+                                        <option value="Dr. Narendra Reddy Busi Reddy">Dr. Narendra Reddy Busi Reddy</option>
+                                        <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
                                     </select>
                                 </div>
                                 <div class="col-xl-12 text-center">
@@ -1035,8 +1036,8 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="far fa-folder"></i>Mental Health</a>
-                                <a href="blog.html"><i class="fal fa-user"></i>David Smith</a>
+                                <a>Mental Health</a>
+                                <a>David Smith</a>
                             </div>
                             <h3 class="blog-title h5 font-body lh-base"><a href="post-surgery-exercises.html">9 Post Surgery Exercises To Help You Regain Muscle Strength</a></h3>
                             <a href="post-surgery-exercises.html" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
@@ -1054,8 +1055,8 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="far fa-folder"></i>Therapy</a>
-                                <a href="blog.html"><i class="fal fa-user"></i>Vivi Marian</a>
+                                <a >Therapy</a>
+                                <a >Vivi Marian</a>
                             </div>
                             <h3 class="blog-title h5 font-body lh-base"><a href="pcod.html">Lifestyle Changes That Can Help With PCOD</a></h3>
                             <a href="pcod.html" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
@@ -1073,8 +1074,8 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="far fa-folder"></i>Acupressure </a>
-                                <a href="blog.html"><i class="fal fa-user"></i>Moris John</a>
+                                <a>Acupressure </a>
+                                <a><i class="fal fa-user"></i>Moris John</a>
                             </div>
                             <h3 class="blog-title h5 font-body lh-base"><a href="irregular-periods.html">Irregular Periods: Common Causes and When to Worry</a></h3>
                             <a href="irregular-periods.html" class="link-btn">Read More<i class="far fa-long-arrow-right"></i></a>
@@ -1252,6 +1253,60 @@
         </div>
     </footer>
 
+    <!-- Emailjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("-dH2HZ2kSwRVINVSK"); // Your EmailJS Public Key
+        })();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("appointmentForm");
+            const button = form.querySelector("button");
+
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // ✅ Trigger HTML5 validation manually
+                const inputs = form.querySelectorAll("input, select");
+                for (let field of inputs) {
+                    if (!field.checkValidity()) {
+                        field.reportValidity();
+                        return;
+                    }
+                }
+
+                // ✅ Collect data
+                const data = {
+                    user_name: form.querySelector("[name='user_name']").value,
+                    user_email: form.querySelector("[name='user_email']").value,
+                    user_phone: form.querySelector("[name='user_phone']").value,
+                    appointment_time: form.querySelector("[name='appointment_time']").value,
+                    service: form.querySelector("[name='service']").value,
+                    doctor: form.querySelector("[name='doctor']").value,
+                    submission_date: new Date().toLocaleString() // Add Submission Date
+                };
+
+                console.log("Sending Data:", data); // Debug
+
+                // ✅ Send email using EmailJS
+                emailjs.send("service_uryai1f", "template_i9fmm1f", data)
+                    .then(function (response) {
+                        alert("Appointment booked successfully!");
+                        console.log("EmailJS Response:", response);
+
+                        // ✅ Reset fields properly
+                        form.querySelectorAll("input").forEach(el => el.value = "");
+                        form.querySelector("[name='service']").selectedIndex = 0;
+                        form.querySelector("[name='doctor']").selectedIndex = 0;
+                    }, function (error) {
+                        alert(" Failed to send. Please try again.");
+                        console.error("EmailJS Error:", error);
+                    });
+            });
+        });
+    </script>
+
     <!--********************************
 			Code End  Here 
 	******************************** -->
@@ -1290,6 +1345,11 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+
+
+
+
+
 </body>
 
 </html>

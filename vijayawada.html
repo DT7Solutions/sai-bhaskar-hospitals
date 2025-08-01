@@ -1252,6 +1252,60 @@
         </div>
     </footer>
 
+    <!-- Emailjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("-dH2HZ2kSwRVINVSK"); // Your EmailJS Public Key
+        })();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("appointmentForm");
+            const button = form.querySelector("button");
+
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // ✅ Trigger HTML5 validation manually
+                const inputs = form.querySelectorAll("input, select");
+                for (let field of inputs) {
+                    if (!field.checkValidity()) {
+                        field.reportValidity();
+                        return;
+                    }
+                }
+
+                // ✅ Collect data
+                const data = {
+                    user_name: form.querySelector("[name='user_name']").value,
+                    user_email: form.querySelector("[name='user_email']").value,
+                    user_phone: form.querySelector("[name='user_phone']").value,
+                    appointment_time: form.querySelector("[name='appointment_time']").value,
+                    service: form.querySelector("[name='service']").value,
+                    doctor: form.querySelector("[name='doctor']").value,
+                    submission_date: new Date().toLocaleString() // Add Submission Date
+                };
+
+                console.log("Sending Data:", data); // Debug
+
+                // ✅ Send email using EmailJS
+                emailjs.send("service_uryai1f", "template_i9fmm1f", data)
+                    .then(function (response) {
+                        alert("Appointment booked successfully!");
+                        console.log("EmailJS Response:", response);
+
+                        // ✅ Reset fields properly
+                        form.querySelectorAll("input").forEach(el => el.value = "");
+                        form.querySelector("[name='service']").selectedIndex = 0;
+                        form.querySelector("[name='doctor']").selectedIndex = 0;
+                    }, function (error) {
+                        alert(" Failed to send. Please try again.");
+                        console.error("EmailJS Error:", error);
+                    });
+            });
+        });
+    </script>
+
     <!--********************************
 			Code End  Here 
 	******************************** -->
