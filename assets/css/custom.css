@@ -129,6 +129,14 @@ p {
     padding: 25px 0;
 }
 
+.location-item.active a {
+    color: #1F66B1 !important;
+}
+
+.location-item.active .mouse-icon path {
+    stroke: #1F66B1;
+}
+
 /* Hero Slider */
 .ls-v6 a.ls-gui-element.ls-nav-prev, 
 .ls-v6 a.ls-gui-element.ls-nav-next {
