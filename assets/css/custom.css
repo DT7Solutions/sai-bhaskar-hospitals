@@ -466,7 +466,9 @@ blockquote:before {
         .space-md-bottom {
             padding-bottom: 20%;
         }
-
+        .close-btn {
+            right: 2%;
+        }
 }
 
 /* Responsive size */
