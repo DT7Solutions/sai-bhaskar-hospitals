@@ -304,7 +304,11 @@ blockquote {
 blockquote:before {
     font-size: 5rem;
 }
-
+.blog-meta a:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
 /* Footer  */
 .footer-logo {
   display: flex;
