@@ -309,6 +309,30 @@ blockquote:before {
     text-decoration: none !important;
     cursor: default !important;
 }
+/* Custome Code for Vijayawada branch */
+.blog-card .blog-img {
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+}
+.blog-card .blog-content {
+    padding: 25px 30px;
+    border-bottom-left-radius: .25rem !important;
+    border-bottom-right-radius: .25rem !important;
+}
+.service-thumb .sr-img,
+.service-thumb:hover .sr-img img,
+.service-thumb .sr-body,
+.vs-brand-wrapper .blog-card .blog-img {
+    border-radius: .25rem !important;
+}
+.appointment-wrapper .form-wrap1 .form-title-box {
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+}
+.appointment-wrapper .form-wrap1 .form-box {
+    border-bottom-left-radius: .25rem !important;
+    border-bottom-right-radius: .25rem !important;
+}
 /* Footer  */
 .footer-logo {
   display: flex;
