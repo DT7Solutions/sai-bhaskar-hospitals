@@ -336,6 +336,40 @@ blockquote:before {
     border-bottom-left-radius: .25rem !important;
     border-bottom-right-radius: .25rem !important;
 }
+.appointment-wrapper .form-wrap1 .form-select, 
+.appointment-wrapper .form-wrap1 .form-control,
+.vs-contact-wrapper .form-wrap3 .form-select, 
+.vs-contact-wrapper .form-wrap3 .form-control  {
+    padding: 10px 15px !important;
+    border-radius: 0.25rem !important;
+}
+.testimonial-wrapper .testimonial-box {
+    border-radius: 0.25rem;
+}
+.testimonial-wrapper .testimonial-box .content p {
+    min-height: 150px;
+}
+.contact-info-section-two .contact-box-two {
+    padding: 85px 0 35px 0;
+}
+.contact-info-section-two .contact-box-two p {
+    text-align: center;
+    margin: 15px 35px;
+}
+.vs-contact-wrapper .contact-information .h3 a {
+    color: #000;
+}
+.vs-team-wrapper .team-card .team-body {
+    text-align: center;
+    padding: 0 25px 30px 25px;
+}
+.vs-team-wrapper .team-card {
+    border-radius: 0.25rem;
+}
+.vs-team-wrapper .team-card .team-head  img{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
 .contact-information a {
     color: #000000;
 }
