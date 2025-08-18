@@ -542,6 +542,9 @@ blockquote:before {
         .close-btn {
             right: 2%;
         }
+        .contact-info-section-two .contact-box-two {
+            padding: 20px 0 10px 0;
+}
 }
 
 /* Responsive size */
