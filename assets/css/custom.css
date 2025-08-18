@@ -203,6 +203,9 @@ section.vs-health-schemes.space-bottom {
 .text-state {
     color: #1F66B1;
 }
+.team-head img {
+    border-radius: .25rem;
+}
 
 /* awards  */
 .project-img {
@@ -332,6 +335,18 @@ blockquote:before {
 .appointment-wrapper .form-wrap1 .form-box {
     border-bottom-left-radius: .25rem !important;
     border-bottom-right-radius: .25rem !important;
+}
+.contact-information a {
+    color: #000000;
+}
+.team-body h3 {
+    min-height: 40px;
+}
+.team-card .team-body {
+    padding: 0 35px 40px;
+}
+.testimonial-box {
+    border-radius: .25rem;
 }
 /* Footer  */
 .footer-logo {
