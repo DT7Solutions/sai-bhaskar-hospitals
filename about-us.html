@@ -46,7 +46,9 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Custom CSS  -->
-     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Emailjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
 
@@ -230,8 +232,9 @@
                                 <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="fas fa-bars"></i></button>
                             </div>
                             <div class="col-auto d-none d-lg-block pe-2 ms-auto">
-                                <a href="./index.html#appointment" class="vs-btn style2">Book Appointment<i
-                                        class="far fa-calendar-alt"></i></a>
+                                <a href="#" class="vs-btn style2" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                                    <i class="far fa-calendar-alt"></i> Book Appointment
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -818,6 +821,100 @@
         </div>
     </footer>
 
+    <!-- CSS to remove black overlay -->
+    <style>
+        .modal-backdrop {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            /* light overlay */
+        }
+    </style>
+    
+    <!-- Appointment Popup Modal -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+    
+                <div class="modal-body">
+                    <form id="appointmentForm1" class="form-box">
+                        <div class="row g-3 ">
+    
+                            <!-- Name -->
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control style2" placeholder="Your Name" name="user_name"
+                                    required>
+                                <i class="fal small fa-user"></i>
+                            </div>
+    
+                            <!-- Email -->
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control style2" placeholder="Email Address"
+                                    name="user_email" required>
+                                <i class="fal small fa-envelope"></i>
+                            </div>
+    
+                            <!-- Phone -->
+                            <div class="col-md-6 form-group">
+                                <input type="number" class="form-control style2" placeholder="Your Phone Number"
+                                    name="user_phone" required>
+                                <i class="fal small fa-phone"></i>
+                            </div>
+    
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="dateTime-pick form-control style2" placeholder="Select Date"
+                                    name="appointment_date" required>
+                                <i class="fal small fa-calendar-alt"></i>
+                            </div>
+    
+                            <!-- Service -->
+                            <div class="col-md-6 form-group">
+                                <select class="form-select style2" name="service" required>
+                                    <option value="" hidden disabled selected>Select Services</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="Obstetrics & Gynaecology">Obstetrics & Gynaecology</option>
+                                    <option value="Pulmonology">Pulmonology</option>
+                                    <option value="Neuro Surgery">Neuro Surgery</option>
+                                    <option value="Plastic Surgery">Plastic Surgery</option>
+                                    <option value="Emergency & Casualty">Emergency & Casualty</option>
+                                    <option value="General Surgery">General Surgery</option>
+                                    <option value="General Medicine">General Medicine</option>
+                                </select>
+                            </div>
+    
+                            <!-- Doctor -->
+                            <div class="col-md-6 form-group">
+                                <select class="form-select style2" name="doctor" required>
+                                    <option value="" hidden disabled selected>Choose Doctor</option>
+                                    <option value="Dr. Narendra Reddy Busireddy">Dr. Busireddy Narendra Reddy</option>
+                                    <option value="Dr. B. Deepthi Reddy">Dr. B. Deepthi Reddy</option>
+                                    <option value="Dr.Srinavasa Rao Konakandla">Dr.Srinavasa Rao Konakandla</option>
+                                    <option value="Dr. Nageswara Rao Gopathi">Dr. Nageswara Rao Gopathi</option>
+                                    <option value="Dr. Nune Sankhya">Dr. Nune Sankhya</option>
+                                    <option value="Dr. Yogitha Chennupati">Dr. Yogitha Chennupati</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="submission_date" id="submission_date">
+    
+    
+                            <!-- Submit -->
+                            <div class="col-12 text-center">
+                                <button type="submit" class="vs-btn style2">
+                                    Book Appointment <i class="far fa-calendar-alt"></i>
+                                </button>
+                            </div>
+    
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
     <!--********************************
 			Code End  Here 
 	******************************** -->
@@ -856,6 +953,8 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <!-- forms -->
+     <script src="assets/js/form-subscriptions.js"></script>
 
 </body>
 

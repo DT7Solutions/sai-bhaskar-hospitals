@@ -141,6 +141,17 @@
   $('.vs-menu-wrapper').vsmobilemenu();
 
 
+  // Prevent mobile menu from closing when clicking appointment button
+  $(document).ready(function () {
+    $('.vs-mobile-menu [data-bs-toggle="modal"]').on('click', function (e) {
+      e.stopPropagation();
+
+      // Close mobile menu after modal opens
+      setTimeout(function () {
+        $('.vs-menu-wrapper').removeClass('vs-body-visible');
+      }, 200);
+    });
+  });
   
   /*---------- 04. Sticky fix ----------*/
   var lastScrollTop = 0;
@@ -697,11 +708,9 @@ if($dataV >= 51){
    /*---------- 20. Date & Time Picker ----------*/
    // Time And Date Picker
    $('.dateTime-pick').datetimepicker({
-     timepicker: true,
+     timepicker: false,
      datepicker: true,
-     format: 'y-m-d H:i',
-     hours12: false,
-     step: 30
+     format: 'd-m-y',
     });
     
     // Only Date Picker
@@ -991,6 +1000,8 @@ if($dataV >= 51){
     appendDots: $('#slidenav4'),
     slidesToScroll: 1
   });
+
+
 
 
 

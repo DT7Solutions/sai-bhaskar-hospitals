@@ -492,6 +492,35 @@ blockquote:before {
 .contact-information p{
     font-size: 18px !important;
 }
+#appointmentModal .modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 100vh; /* full screen height */
+}
+.form-control.style2 {
+    border-radius:0.25rem !important;
+}
+ .form-select.style2{
+    border-radius: 0.25rem !important;
+}
+.newsletter-form .form-group .btn-style {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    border: 0;
+}
+.newsletter-section .title-area-two .sub-title6{
+    font-size: 26px;
+    font-family: "Dancing Script", cursive;
+}
+.newsletter-section .title-area-two h2{
+    font-size: 34px;
+    font-family:  "Quicksand", sans-serif;
+}
+.btn-style:before {
+    background-color: #1F66B1;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -506,7 +535,12 @@ blockquote:before {
         padding: 7px 8px 7px 8px;
         font-size: 5px;
     }
+    #appointmentModal .modal-dialog {
+    margin: auto 5%;
+    min-height: 108vh;
 }
+}
+
 
 @media (max-width: 992px) {
     .service-thumb .sr-body {

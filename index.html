@@ -30,6 +30,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!-- Layerslider -->
@@ -46,8 +47,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Font Awesome  -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-XyZx4ROqKJ5WplBQDU7Xa0K58tv+IdK6F7qZkYx0BGQGMyT43P+97B2f5UkOyTT9" crossorigin="anonymous">
+    <!-- Emailjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
 
@@ -97,7 +98,7 @@
             </div>
             <div class="vs-mobile-menu">
                 <ul>
-                    <li class="menu-item-has-children active"><a href="./index.html">Home</a></li>
+                    <li class="menu-item-has-children "><a href="./index.html">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li class="menu-item-has-children">
                         <a href="./services.html">Services</a>
@@ -116,7 +117,9 @@
                     <li><a href="./awards-news.html">Awards & News</a></li>
                     <!--  <li><a href="./blogs.html">Blogs</a></li> --> 
                     <li><a href="./contact.html">Contact Us</a></li>
-                    <a href="./index.html#appointment" class="vs-btn style2 my-3">Book Appointment<i class="far fa-calendar-alt"></i></a>
+                    <a href="#" class="vs-btn style2" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                                    <i class="far fa-calendar-alt"></i> Book Appointment
+                    </a>
                 </ul>
             </div>
         </div>
@@ -231,8 +234,9 @@
                                 <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="fas fa-bars"></i></button>
                             </div>
                             <div class="col-auto d-none d-lg-block pe-2 ms-auto">
-                                <a href="./index.html#appointment" class="vs-btn style2">Book Appointment<i
-                                        class="far fa-calendar-alt"></i></a>
+                                <a href="#" class="vs-btn style2" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                                    <i class="far fa-calendar-alt"></i> Book Appointment
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -926,7 +930,7 @@
     </section>
 
     <!--Appointment Form Area -->
-    <section class="appointment-wrapper space-md-bottom" id="appointment">
+    <!-- <section class="appointment-wrapper space-md-bottom" id="appointment">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center">
@@ -1019,7 +1023,31 @@
                 </div>
             </div>
         </div>
+    </section> -->
+    
+    <!-- news-letter-section -->
+    <section class="newsletter-section space-md">
+        <div class="container-style6">
+            <div class="row align-content-center justify-content-center">
+                <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="title-area-two light">
+                        <span class="sub-title6">Book An Appointment</span>
+                        <h2> Call Us Anytime For Assistance </h2>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="500ms">
+                    <form action="#" class="newsletter-form">
+                        <div class="form-group">
+                            <a href="#" class="vs-btn style2" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                                    <i class="far fa-calendar-alt"></i> Book Appointment
+                    </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- End news-letter-section -->
     
     <!--Testimonial Area-->
     <div data-bg-src="assets/img/bg/bg-shape-8.jpg">
@@ -1416,59 +1444,101 @@
         </div>
     </footer>
 
-    <!-- Emailjs -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("-dH2HZ2kSwRVINVSK"); // Your EmailJS Public Key
-        })();
+    <!-- CSS to remove black overlay -->
+    <style>
+        .modal-backdrop {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            /* light overlay */
+        }
+    </style>
+    
+    <!-- Appointment Popup Modal -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+    
+                <div class="modal-body">
+                    <form id="appointmentForm1" class="form-box">
+                        <div class="row g-3 ">
+    
+                            <!-- Name -->
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control style2" placeholder="Your Name" name="user_name"
+                                    required>
+                                <i class="fal small fa-user"></i>
+                            </div>
+    
+                            <!-- Email -->
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control style2" placeholder="Email Address"
+                                    name="user_email" required>
+                                <i class="fal small fa-envelope"></i>
+                            </div>
+    
+                            <!-- Phone -->
+                            <div class="col-md-6 form-group">
+                                <input type="number" class="form-control style2" placeholder="Your Phone Number"
+                                    name="user_phone" required>
+                                <i class="fal small fa-phone"></i>
+                            </div>
+    
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="dateTime-pick form-control style2" placeholder="Select Date"
+                                    name="appointment_date" required>
+                                <i class="fal small fa-calendar-alt"></i>
+                            </div>
+    
+                            <!-- Service -->
+                            <div class="col-md-6 form-group">
+                                <select class="form-select style2" name="service" required>
+                                    <option value="" hidden disabled selected>Select Services</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="Obstetrics & Gynaecology">Obstetrics & Gynaecology</option>
+                                    <option value="Pulmonology">Pulmonology</option>
+                                    <option value="Neuro Surgery">Neuro Surgery</option>
+                                    <option value="Plastic Surgery">Plastic Surgery</option>
+                                    <option value="Emergency & Casualty">Emergency & Casualty</option>
+                                    <option value="General Surgery">General Surgery</option>
+                                    <option value="General Medicine">General Medicine</option>
+                                </select>
+                            </div>
+    
+                            <!-- Doctor -->
+                            <div class="col-md-6 form-group">
+                                <select class="form-select style2" name="doctor" required>
+                                    <option value="" hidden disabled selected>Choose Doctor</option>
+                                    <option value="Dr. Narendra Reddy Busireddy">Dr. Busireddy Narendra Reddy</option>
+                                    <option value="Dr. B. Deepthi Reddy">Dr. B. Deepthi Reddy</option>
+                                    <option value="Dr.Srinavasa Rao Konakandla">Dr.Srinavasa Rao Konakandla</option>
+                                    <option value="Dr. Nageswara Rao Gopathi">Dr. Nageswara Rao Gopathi</option>
+                                    <option value="Dr. Nune Sankhya">Dr. Nune Sankhya</option>
+                                    <option value="Dr. Yogitha Chennupati">Dr. Yogitha Chennupati</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="submission_date" id="submission_date">
+    
+    
+                            <!-- Submit -->
+                            <div class="col-12 text-center">
+                                <button type="submit" class="vs-btn style2">
+                                    Book Appointment <i class="far fa-calendar-alt"></i>
+                                </button>
+                            </div>
+    
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </div>
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("appointmentForm");
-            const button = form.querySelector("button");
 
-            button.addEventListener("click", function (e) {
-                e.preventDefault();
 
-                // ✅ Trigger HTML5 validation manually
-                const inputs = form.querySelectorAll("input, select");
-                for (let field of inputs) {
-                    if (!field.checkValidity()) {
-                        field.reportValidity();
-                        return;
-                    }
-                }
-
-                // ✅ Collect data
-                const data = {
-                    user_name: form.querySelector("[name='user_name']").value,
-                    user_email: form.querySelector("[name='user_email']").value,
-                    user_phone: form.querySelector("[name='user_phone']").value,
-                    appointment_time: form.querySelector("[name='appointment_time']").value,
-                    service: form.querySelector("[name='service']").value,
-                    doctor: form.querySelector("[name='doctor']").value,
-                    submission_date: new Date().toLocaleString() // Add Submission Date
-                };
-
-                console.log("Sending Data:", data); // Debug
-
-                // ✅ Send email using EmailJS
-                emailjs.send("service_uryai1f", "template_i9fmm1f", data)
-                    .then(function (response) {
-                        alert("Appointment booked successfully!");
-                        console.log("EmailJS Response:", response);
-
-                        // ✅ Reset fields properly
-                        form.querySelectorAll("input").forEach(el => el.value = "");
-                        form.querySelector("[name='service']").selectedIndex = 0;
-                        form.querySelector("[name='doctor']").selectedIndex = 0;
-                    }, function (error) {
-                        alert(" Failed to send. Please try again.");
-                        console.error("EmailJS Error:", error);
-                    });
-            });
-        });
-    </script>
 
 
     <!--********************************
@@ -1509,8 +1579,8 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
-
-
+    <!-- forms js  -->
+    <script src="assets/js/form-subscriptions.js"></script>
 
 
 
